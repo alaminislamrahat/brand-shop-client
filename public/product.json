@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "brandName": "Apple",
+      "image": "https://i.ibb.co/jkzSzBT/vecteezy-apple-brand-logo-phone-symbol-with-name-black-design-mobile-20927576.jpg"
+    },
+    {
+      "id": 2,
+      "brandName": "Sony",
+      "image": "https://i.ibb.co/QKCkSnJ/vecteezy-sony-brand-logo-phone-symbol-design-japan-mobile-vector-20927295.jpg"
+    },
+    {
+      "id": 3,
+      "brandName": "Lenovo",
+      "image": "https://i.ibb.co/sm4LXCX/vecteezy-lenovo-brand-logo-phone-symbol-name-blue-design-china-mobile-20927129.jpg"
+    },
+   
+    {
+      "id": 5,
+      "brandName": "Samsung",
+      "image": "https://i.ibb.co/zFrG1yG/vecteezy-samsung-logo-icon-editorial-vector-6892674.jpg"
+    },
+    {
+      "id": 6,
+      "brandName": "Intel",
+      "image": "https://i.ibb.co/9Wndx1N/vecteezy-intel-logo-68072.jpg"
+    },
+    
+    {
+      "id": 8,
+      "brandName": "Vivo",
+      "image": "https://i.ibb.co/4Wv0hy2/vecteezy-vivo-brand-logo-phone-symbol-name-black-design-chinese-20927602.jpg"
+    }
+  
+  ]
