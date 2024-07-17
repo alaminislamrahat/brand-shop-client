@@ -32,7 +32,7 @@ const Cart = ({ data, setDatas,datas  }) => {
                             icon: "success"
                         });
                     }
-                    const remainning = datas.filter(data => data._id !== id);
+                    const remainning = datas?.filter(data => data._id !== id);
                     setDatas(remainning)
                 })
                 
