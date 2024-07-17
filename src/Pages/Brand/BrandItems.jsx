@@ -10,9 +10,9 @@ const BrandItems = () => {
     const data = useLoaderData();
     const { id } = useParams();
 
-    console.log(data, id)
+    const idLow = id.toLowerCase()
 
-    const brands = data.filter(brand => brand.brandName === id);
+    const brands = data.filter(brand => brand.brandName.toLowerCase() === idLow);
     console.log(brands)
     const [action, setAction] = useState(true)
     const [info, setInfo] = useState(brands.slice(0, 6))
@@ -35,10 +35,10 @@ const BrandItems = () => {
          className="bg-no-repeat bg-cover bg-center bg-fixed">
             <BrandBanner />
             <div>
-                <h2 className="text-6xl font-bold text-center py-12 text-white">{id} Items </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mx-16 py-12">
+                <h2 className="md:text-6xl font-bold text-center py-12 text-white">{id} Items </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:mx-16 py-12">
                     {
-                        info.map(brand => <BrandItem brand={brand} key={brand}></BrandItem>)
+                        info.map(brand => <BrandItem info={info} setInfo={setInfo} brand={brand} key={brand}></BrandItem>)
                     }
 
 

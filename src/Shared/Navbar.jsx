@@ -1,19 +1,31 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.log(error.message))
+    }
+
     const navLinks = <>
-       <NavLink className="bg-[rgba(176,184,186,.5)] rounded-2xl"  to="/"> <li><a>Home</a></li></NavLink>
-       <NavLink className="bg-[rgba(176,184,186,.5)] rounded-2xl" to="/addproduct"> <li><a>Add Product</a></li></NavLink>
-       <NavLink className="bg-[rgba(176,184,186,.5)] rounded-2xl" to="/mycart"> <li><a>My Cart</a></li></NavLink>
-       
-       
-       
+        <NavLink className="bg-[rgba(176,184,186,.5)] rounded-2xl" to="/"> <li><a>Home</a></li></NavLink>
+        <NavLink className="bg-[rgba(176,184,186,.5)] rounded-2xl" to="/addproduct"> <li><a>Add Product</a></li></NavLink>
+        <NavLink className="bg-[rgba(176,184,186,.5)] rounded-2xl" to="/mycart"> <li><a>My Cart</a></li></NavLink>
+
+
+
     </>
 
     return (
-        <div className="navbar z-10 text-white fixed">
+        <div className="navbar z-10 text-white fixed z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,18 +45,23 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                       {navLinks}
+                        {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-outline border-white text-white text-xl">Rahat Tech</a>
+                <a className="btn btn-outline btn-xs md:btn-md border-white text-white md:text-xl">Rahat Tech</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-7">
-                  {navLinks}
+                    {navLinks}
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login"> <button className="btn btn-outline btn-warning">Login</button></Link>
+                <p className="text-white font-bold mr-3">{user && user.email}</p>
+                <Link to="/login"> <button
+                    onClick={handleLogOut}
+                    className="btn btn-outline btn-xs md:btn-md btn-warning">{
+                        user ? "Log OUt" : "Login"
+                    }</button></Link>
             </div>
         </div>
     );

@@ -6,9 +6,9 @@ const Banner = () => {
         <div>
 
 
-            <div className='absolute  top-10 md:top-52 md:left-52 '>
+            <div className='absolute  top-16 md:top-52 md:left-52  left-20'>
                 <h2 className=' md:text-6xl font-bold text-center text-purple-200 '>We have our best products</h2>
-                <h1 className='text-white font-bold text-center my-5 text-2xl'>Buy anything</h1>
+                <h1 className='text-white font-bold text-center md:my-5 md:text-2xl'>Buy anything</h1>
             </div>
 
          
