@@ -3,6 +3,8 @@ import Cart from "./Cart";
 import bg from '../../assets/alamin.jpg'
 import { useState } from "react";
 
+import Banner from "../../Components/Banner/Banner";
+
 
 const MyCart = () => {
 
@@ -16,6 +18,7 @@ const MyCart = () => {
             backgroundImage : `url(${bg})`
         }}
          className="py-6 bg-no-repeat bg-cover bg-center bg-fixed">
+            <Banner/>
             <h2 className="md:text-6xl font-bold text-white text-center md:py-8">my cart</h2>
 
             <div className="grid md:grid-cols-2 gap-5 md:mx-9 ">

@@ -6,8 +6,8 @@ const BrandBanner = () => {
     return (
         <div>
             <Spline
-        scene="https://prod.spline.design/2KDhg5WIpNiXezSC/scene.splinecode" 
-      />
+                scene="https://prod.spline.design/2KDhg5WIpNiXezSC/scene.splinecode"
+            />
         </div>
     );
 };
